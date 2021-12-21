@@ -13,7 +13,15 @@ function kira() {
 
     let total1 = unitprice1 * Quantity1;
     let total2 = unitprice2 * Quantity2;
-    
+    let gdtotal = total1 + total2;
+
+    let discountX = 0;
+    if (yes == true) {
+        discountX = gdtotal * 0.05;
+    }
+
+    let finalprice = gdtotal - discountX;
+
 
     document.getElementById("o_name").innerText = name;
     document.getElementById("o_yes").checked = yes;
@@ -27,6 +35,10 @@ function kira() {
 
     document.getElementById("total1").innerText = total1;
     document.getElementById("total2").innerText = total2;
+    document.getElementById("gdtotal").innerText = gdtotal;
+
+    document.getElementById("discount").innerText = discountX;
+    document.getElementById("finalprice").innerText = finalprice;
 
     document.getElementById("input").style.display = "none";
     document.getElementById("output").style.display = "table";
