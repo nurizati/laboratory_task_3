@@ -4,6 +4,7 @@ label {
     color: black;
     font-weight: bold;
    }
+   
    input[type=text],
    input[type=number] {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -15,6 +16,7 @@ label {
     border-right: none;
     border-bottom: none;
    }
+
    input[type=submit] {
     border: none;
     padding: 8px 10px;
@@ -24,6 +26,7 @@ label {
     background-color: rgb(252, 38, 0);
     font-size: 15px;
    }
+
    input[type=reset] {
     border: none;
     padding: 8px 10px;
@@ -33,6 +36,7 @@ label {
     background-color: rgb(250, 37, 0);
     font-size: 15px;
    }
+
    input[type=text]:focus,
    input[type=number]:focus,
    input[type=submit]:focus,
@@ -48,12 +52,15 @@ label {
    .item1{
        background-color: darkgrey;
    }
+
    .item2{
        background-color: darkgrey;
    }
+
    .payment{
        background-color: darkgrey;
    }
+
    .btn{
        width: 50;
        height: 50;
