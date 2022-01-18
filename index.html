@@ -6,84 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <link rel="stylesheet" type="text/css" href="styleSale.css">
+
 </head>
 
 <body>
 
     <h1>SALES INFO</h1>
+
     <form>
-    <table border="1" id="input">
-        <tr class="sales">
-            <th colspan="2">SALES INFO</th>
-        </tr>
-        <tr>
-            <td width="20%"><label>Customer Name</label></td>
-            <td>
-                <input type="text" name="customername" id="i_name" required />
-            </td>
-        </tr>
-        <tr>
-            <td><label>Membership Card</label></td>
-            <td><input type="radio" id="yes" value="Yes" name="membercard" required />Yes
-                <input type="radio" id="no" value="No" name="membercard" required />No
-            </td>
-        </tr>
-        <tr class="item1">
-            <th colspan="2"><b> ITEM 1 </b></th>
-        </tr>
-        <tr>
-            <td><label>Name </label></td>
-            <td>
-                <input type="text" id="i_name1" name="name1" required />
-            </td>
-        </tr>
-        <tr>
-            <td><label>Unit Price(RM) </label></td>
-            <td>
-                <input type="number" id="i_unitprice1" name="unitprice1" required />
-            </td>
-        </tr>
-        <tr>
-            <td><label>Quantity </label></td>
-            <td>
-                <input type="number" id="i_quantity1" name="Quantity1" required />
-            </td>
-        </tr>
-        <tr class="item2">
-            <th colspan="2"><b> ITEM 2 </b></th>
-        </tr>
-        <tr>
-            <td><label>Name </label></td>
-            <td>
-                <input type="text" id="i_name2" name="name2" required />
-            </td>
-        </tr>
-        <tr>
-            <td><label>Unit Price(RM) </label></td>
-            <td>
-                <input type="number" id="i_unitprice2" name="unitprice2" required />
-            </td>
-        </tr>
-        <tr>
-            <td><label>Quantity </label></td>
-            <td>
-                <input type="number" id="i_quantity2" name="Quantity2" required />
-            </td>
-        </tr>
-        <tr>
-            <th bgcolor="#909497" colspan="2">
-                <button class="btn" type="button" onclick="kira()">KIRA</button>
-                <input type="reset" value="RESET">
-            </th>
-        </tr>
-    </table>
+        <table border="1" id="input">
+            <tr class="sales">
+                <th colspan="2">SALES INFO</th>
+            </tr>
+            <tr>
+                <td width="20%"><label>Customer Name</label></td>
+                <td>
+                    <input type="text" name="customername" id="i_name" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Membership Card</label></td>
+                <td><input type="radio" id="yes" value="Yes" name="membercard" required />Yes
+                    <input type="radio" id="no" value="No" name="membercard" required />No
+                </td>
+            </tr>
+            <tr class="item">
+                <th colspan="2"><b>ITEM 1</b></th>
+            </tr>
+            <tr>
+                <td><label>Name </label></td>
+                <td>
+                    <input type="text" id="i_name1" name="name1" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Unit Price(RM)</label></td>
+                <td>
+                    <input type="number" id="i_unitprice1" name="unitprice1" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Quantity</label></td>
+                <td>
+                    <input type="number" id="i_quantity1" name="Quantity1" required />
+                </td>
+            </tr>
+            <tr class="item">
+                <th colspan="2"><b> ITEM 2</b></th>
+            </tr>
+            <tr>
+                <td><label>Name</label></td>
+                <td>
+                    <input type="text" id="i_name2" name="name2" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Unit Price(RM)</label></td>
+                <td>
+                    <input type="number" id="i_unitprice2" name="unitprice2" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label>Quantity</label></td>
+                <td>
+                    <input type="number" id="i_quantity2" name="Quantity2" required />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button class="btnCal" type="button" onclick="cal()">CALCULATE</button>
+                    <button class="reset" type="reset">RESET</button>
+                </th>
+            </tr>
+        </table>
     </form>
+
     <br><br>
 
-    <h2> OUTPUT </h2>
-    <table border="1" id="output"> 
+
+<h2> OUTPUT </h2>
+    <table border="1" id="output">
         <tr class="sales">
             <th colspan="2">SALES INFO</th>
         </tr>
@@ -94,88 +97,90 @@
             </td>
         </tr>
         <tr>
-            <td> Membership Card </td>
+            <td> Membership Card</td>
             <td><input type="radio" id="o_yes" value="Yes" name="o_membercard" disabled />Yes
                 <input type="radio" id="o_no" value="No" name="o_membercard" disabled />No
             </td>
         </tr>
-        <tr class="item1">
-            <th colspan="3"><b>ITEM 1 </b></th>
+        <tr class="item">
+            <th colspan="3"><b>ITEM 1</b></th>
         </tr>
         <tr>
-            <td> Name </td>
+            <td>Name</td>
             <td>
                 <span id="o_name1"></span>
             </td>
         </tr>
         <tr>
-            <td> Unit Price(RM) </td>
+            <td>Unit Price(RM)</td>
             <td>
                 <span id="o_unitprice1"></span>
             </td>
         </tr>
         <tr>
-            <td> Quantity </td>
+            <td>Quantity</td>
             <td>
                 <span id="o_quantity1"></span>
             </td>
         </tr>
         <tr>
-            <td bgcolor="#AED6F1"><b>Total Price </b></td>
+            <td class="total"><b>Total Price</b></td>
             <td>
                 <span id="total1"></span>
             </td>
         </tr>
-        <tr>
-            <th colspan="2" class="item2"><b>ITEM 2 </b></th>
+        <tr class="item">
+            <th colspan="2"><b>ITEM 2</b></th>
         </tr>
         <tr>
-            <td> Name </td>
+            <td>Name</td>
             <td>
                 <span id="o_name2"></span>
             </td>
         </tr>
         <tr>
-            <td> Unit Price(RM) </td>
+            <td>Unit Price(RM)</td>
             <td>
                 <span id="o_unitprice2"></span>
             </td>
         </tr>
         <tr>
-            <td> Quantity </td>
+            <td>Quantity</td>
             <td>
                 <span id="o_quantity2"></span>
             </td>
         </tr>
         <tr>
-            <td bgcolor="#AED6F1"><b>Total Price </b></td>
+            <td class="total"><b>Total Price</b></td>
             <td>
                 <span id="total2"></span>
             </td>
         </tr>
         <tr>
-            <th colspan="2" class="payment"><b>PAYMENT INFO </b></th>
+            <th colspan="2" class="payment"><b>PAYMENT INFO</b></th>
         </tr>
         <tr>
-            <td bgcolor="#AED6F1"><b>Grand Total </b></td>
+            <td class="total"><b>Grand Total</b></td>
             <td>
                 <span id="gdtotal"></span>
             </td>
         </tr>
         <tr>
-            <td bgcolor="#AED6F1"><b>Discount </b></td>
+            <td class="discount"><b>Discount</b></td>
             <td>
                 <span id="discount"></span>
             </td>
         </tr>
         <tr>
-            <td bgcolor="#AED6F1"><b>Final Price </b></td>
+            <td class="total"><b>Final Price </b></td>
             <td>
                 <span id="finalprice"></span>
             </td>
         </tr>
     </table>
+
     <script src="CalSale.js"></script>
+
 </body>
 
 </html>
